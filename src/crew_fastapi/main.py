@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from crew import Mirante
 import db_postgresql
 
-os.environ["HF_TOKEN"] = "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"
+os.environ["HF_TOKEN"] = "TOKEN"
 os.environ["OPENAI_MODEL_NAME"] = "huggingface/meta-llama/Llama-3.1-8B-Instruct"
 
 app = FastAPI()
