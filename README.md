@@ -2,7 +2,7 @@
 
 ## Instalação:
     
-    CrewAI, FastAPI, PostgreSQL
+Necessário instalar: CrewAI, FastAPI e PostgreSQL
 
 ## Descrição da Solução:
 ### CrewAI
@@ -23,18 +23,27 @@ Para utilizar um LLM diferente ao usado no exemplo, alterar as seguintes linhas 
 - insert_table(conn,code_snippet,suggestion) insere uma linha na tabela contendo o código original e a sugestão.
 
 ## Execução:
-- Para testar a solução basta executar o comando
+Para testar a solução basta executar o comando
 
-  uvicorn main:app --reload --port 8080
-  
-- Na sequencia, abra o browser no endereço http://localhost:8080/docs
+    uvicorn main:app --reload --port 8080
+
+Na sequencia, abra o browser no endereço http://localhost:8080/docs
 - /health/ não possui parâmetro de entrada. 
-- /analyze-code/ é experado que o código esteja dentro da uma célula chamada python_code em um dicionário, como a seguir:
+- /analyze-code/ é experado que o código esteja dentro da uma célula chamada python_code em um dicionário
+
+Ao executar o analyze-code, o agente é invocado e, através do uso de LLM, sugere melhoria ou correção ao código fornecido como entrada.
+
+Exemplo de código de entrada:
 
     { "python_code":"x = [2, 8, 512]\n\n  for i  in x: \n\n print j" }
 
-- Ao executar o analyze-code, o agente é invocado e, através do uso de LLM, sugere melhoria ou correção ao código fornecido como entrada.
+Exemplo de código de saída:
 
+    ```python
+    x = [2, 8, 512]
+    for i in x:
+        print(i)
+    ```This corrected code now uses the variable name `i` to correctly print the values in the list `x`."
 
 
 
