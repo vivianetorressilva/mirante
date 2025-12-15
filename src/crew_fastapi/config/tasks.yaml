@@ -1,0 +1,6 @@
+analyzer_task:
+  description: >
+    Improve or correct the python code.
+  expected_output: >
+    Executable python code.
+  agent: analyzer
