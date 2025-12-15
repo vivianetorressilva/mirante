@@ -23,7 +23,10 @@ Para utilizar um LLM diferente ao usado no exemplo, alterar as seguintes linhas 
 - insert_table(conn,code_snippet,suggestion) insere uma linha na tabela contendo o código original e a sugestão.
 
 ## Execução:
-- Para testar a solução basta executar o comando uvicorn main:app --reload --port 8080
+- Para testar a solução basta executar o comando
+
+  uvicorn main:app --reload --port 8080
+  
 - Na sequencia, abra o browser no endereço http://localhost:8080/docs
 - /health/ não possui parâmetro de entrada. 
 - /analyze-code/ é experado que o código esteja dentro da uma célula chamada python_code em um dicionário, como a seguir:
