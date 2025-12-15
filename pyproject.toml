@@ -1,0 +1,25 @@
+[project]
+name = "crew_fastapi"
+version = "0.1.0"
+description = "crew_fastapi using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]==1.6.1",
+     "litellm",
+]
+
+[project.scripts]
+crew_fastapi = "crew_fastapi.main:run"
+run_crew = "crew_fastapi.main:run"
+train = "crew_fastapi.main:train"
+replay = "crew_fastapi.main:replay"
+test = "crew_fastapi.main:test"
+run_with_trigger = "crew_fastapi.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
