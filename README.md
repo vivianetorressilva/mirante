@@ -27,7 +27,9 @@ Para utilizar um LLM diferente ao usado no exemplo, alterar as seguintes linhas 
 - Na sequencia, abra o browser no endereço http://localhost:8080/docs
 - /health/ não possui parâmetro de entrada. 
 - /analyze-code/ é experado que o código esteja dentro da uma célula chamada python_code em um dicionário, como a seguir:
-- { "python_code":"x = [2, 8, 512]\n\n  for i  in x: \n\n print j" }
+
+    { "python_code":"x = [2, 8, 512]\n\n  for i  in x: \n\n print j" }
+
 - Ao executar o analyze-code, o agente é invocado e, através do uso de LLM, sugere melhoria ou correção ao código fornecido como entrada.
 
 
