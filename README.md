@@ -6,7 +6,7 @@ Necessário instalar: CrewAI, FastAPI e PostgreSQL
 
 ## Descrição da Solução:
 ### CrewAI
-- Agente Analyzer (agents.yaml): analysa o código python recebido como entrada e sugere melhorias ou correções
+- Agente Analyzer (agents.yaml): analisa o código python recebido como entrada e sugere melhorias ou correções
 - Tarefa Analyzer_task (task.yaml): tarefa realizada pelo agente Analyzer para sugerir melhorias ou correções
 
 Para utilizar um LLM diferente ao usado no exemplo, alterar as seguintes linhas do código em main.py
